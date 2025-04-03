@@ -32,15 +32,15 @@ A full-stack web application to help users manage their personal finances by tra
 
 
 
-## 🛠 Tech Stack
+## 💻 Tech Stack
 
-| Layer      | Technology                           |
-|------------|---------------------------------------|
-| Frontend   | React, Vite, Axios                    |
-| Backend    | ASP.NET Core Web API, Entity Framework Core |
-| Database   | PostgreSQL (or SQLite alternative)    |
-| Auth       | OAuth 2.0, JWT                        |
-| API Tools  | Swagger / OpenAPI                     |
+- **Frontend**: React (Vite, JSX)
+- **Backend**: ASP.NET Core Web API (**C#**)
+- **Database**: PostgreSQL
+- **ORM**: Entity Framework Core
+- **Authentication**: OAuth 2.0 (Google), JWT
+- **Dev Tools**: Swagger (OpenAPI), Visual Studio Code
+- **Deployment (Optional)**: Docker, GitHub Actions
 
 
 ## 📦 Folder Structure
