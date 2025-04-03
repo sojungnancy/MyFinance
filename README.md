@@ -7,7 +7,7 @@ A full-stack web application to help users manage their personal finances by tra
 ## 🚀 Features
 
 #### 🔐 User Authentication
-- OAuth 2.0 login (Google, Microsoft)
+- OAuth 2.0 login (Google)
 - JWT-based token authentication
 - User-specific data separation
 
