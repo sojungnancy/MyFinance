@@ -63,6 +63,8 @@ myfinance-project/
 │   │   └── App.jsx
 ```
 
+## 📦 DB ERD
+![Screenshot 2025-04-03 at 6 11 23 PM](https://github.com/user-attachments/assets/bf979cd4-4ecb-4688-be1c-15b310b9b405)
 
 ## ⚙️ Setup Instructions
 
