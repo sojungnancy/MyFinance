@@ -69,7 +69,8 @@ myfinance-project/
 
 ## 📦 DB ERD
 
-<img width="811" alt="Screenshot 2025-04-03 at 11 23 34 PM" src="https://github.com/user-attachments/assets/a7d450f0-e8a3-4f88-a890-c22a78f3a906" />
+![Screenshot 2025-04-18 at 2 23 36 PM](https://github.com/user-attachments/assets/a39572ba-0771-41d3-b911-375c01f0c2a3)
+
 
 ## ⚙️ Setup Instructions
 
