@@ -6,7 +6,7 @@ A full-stack web application to help users manage their personal finances by tra
 
 #### 🔐 User Authentication
 
-- OAuth 2.0 login (Google)
+- OAuth 2.0 login (Google API)
 - JWT-based token authentication
 - User-specific data separation
 
@@ -39,7 +39,7 @@ A full-stack web application to help users manage their personal finances by tra
 - **Database**: PostgreSQL
 - **ORM**: Entity Framework Core
 - **Authentication**: OAuth 2.0 (Google), JWT
-- **Dev Tools**: Swagger (OpenAPI), Visual Studio Code
+- **Dev Tools**: Swagger (Open API), Visual Studio Code
 - **Deployment (Optional)**: Docker, GitHub Actions
 
 ## 📦 Folder Structure
@@ -56,7 +56,7 @@ myfinance-project/
 │   ├── Data/ (DbContext)
 │   └── Program.cs
 │
-├── backend.Tests/            // Test-Driven-Development
+├── backend.Tests/           
 │   ├── backend.Tests.csproj
 │   └──UserApiTests.cs
 │
@@ -95,6 +95,6 @@ npm run dev
 - Integrate Open Banking API for automatic transaction imports
 - Email notifications for budget thresholds
 - Multi-user support with advanced permissions
-- Mobile-friendly responsive design
+- Mobile app version
 
 © 2025 Sojung Kim
