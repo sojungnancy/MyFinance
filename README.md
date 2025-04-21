@@ -96,6 +96,6 @@ npm run dev
 - Integrate Open Banking API for automatic transaction imports
 - Email notifications for budget thresholds
 - Multi-user support with advanced permissions
-- Mobile app version
+- Mobile app version deploy
 
 © 2025 Sojung Kim
