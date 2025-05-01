@@ -35,7 +35,7 @@ A full-stack web application to help users manage their personal finances by tra
 ## 💻 Tech Stack
 
 - **Frontend**: React (Vite, JSX)
-- **Backend**: ASP.NET Core Web API (**C#**)
+- **Backend**: ASP.NET Core Web API (C#)
 - **Database**: PostgreSQL
 - **ORM**: Entity Framework Core
 - **Authentication**: OAuth 2.0 (Google), JWT
