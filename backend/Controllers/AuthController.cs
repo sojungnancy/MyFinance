@@ -57,13 +57,6 @@ namespace backend.Controllers
         var token = _jwtService.GenerateToken(user.id, user.Email, user.Name);
 
         // ✅ 응답
-        return Ok(new
-        {
-            token,
-            user = new {
-                id = user.id,
-                email = user.Email,
-                name = user.Name
-            }
-        });
+        return Redirect($"http://localhost:5173/login/success?token={token}&email={user.Email}&name={user.Name}");
+
 }}}

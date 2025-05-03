@@ -13,7 +13,7 @@ namespace backend.Models.DTOs
     public class TransactionDto
     {
         public decimal Amount { get; set; }
-        public string Type { get; set; }= string.Empty;
+        public string Type { get; set; }= string.Empty; // "income" or "expense"
         public string Category { get; set; } = string.Empty;
         public DateTime Date { get; set; }
         public string? Memo { get; set; }
