@@ -91,6 +91,14 @@ npm install
 npm run dev
 ```
 
+#### SQL
+
+```bash
+brew services start postgresql@14
+psql postgres
+\c myfinance_db
+```
+
 ## 📌 Future Plans
 
 - Integrate Open Banking API for automatic transaction imports
