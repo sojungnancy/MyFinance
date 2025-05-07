@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 import UserSection from './User';
