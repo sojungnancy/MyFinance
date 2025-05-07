@@ -14,5 +14,9 @@ public class AppDbContext : DbContext
     
     public DbSet<Transaction> Transactions => Set<Transaction>();
     public DbSet<Budget> Budgets => Set<Budget>();
-}
+
+    public DbSet<Announcement> Announcements => Set<Announcement>();
+    public DbSet<UserNotification> UserNotifications => Set<UserNotification>();
+    public DbSet<Feedback> Feedbacks => Set<Feedback>();
+    }
 }

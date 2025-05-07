@@ -5,11 +5,14 @@ import MainPage from './pages/MainPage';
 import DashboardPage from './pages/DashboardPage';
 import TransactionsPage from './pages/TransactionsPage';
 import BudgetPage from './pages/BudgetPage';
+import LoginSuccessPage from '../login/LoginSuccess';
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/login/success" element={<LoginSuccessPage />} />
+
         <Route path="/" element={<MainPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/transactions" element={<TransactionsPage />} />

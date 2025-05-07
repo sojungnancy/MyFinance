@@ -1,7 +1,14 @@
 import React from 'react';
-
+import NavigationBar from '../components/navbar/NavBar';
 const TransactionsPage: React.FC = () => {
-  return <h1>🏠 Welcome to TransactionsPage (with TypeScript)</h1>;
+  return (
+    <div>
+      <NavigationBar />
+      <div style={{ padding: '2rem' }}>
+        🏠 Welcome to MyFinance - This is TransactionsPage page
+      </div>
+    </div>
+  );
 };
 
 export default TransactionsPage;

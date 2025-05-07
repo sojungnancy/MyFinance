@@ -29,14 +29,26 @@ builder.Services.AddAuthentication(options =>
 })
 .AddCookie(options =>
 {
-    options.Cookie.SameSite = SameSiteMode.Lax;
-    options.Cookie.SecurePolicy = CookieSecurePolicy.None;
+    options.Cookie.Name = ".AspNetCore.Cookies";
+    options.Cookie.HttpOnly = true;
+    options.Cookie.SameSite = SameSiteMode.None;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;  // ✅ 반드시 이렇게
 })
+
+
+
 .AddGoogle(options =>
 {
     options.ClientId = builder.Configuration["Authentication:Google:ClientId"]!;
     options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"]!;
+    options.CallbackPath = "/auth/callback"; 
 });
+builder.Services.Configure<CookiePolicyOptions>(options =>
+{
+    options.MinimumSameSitePolicy = SameSiteMode.Lax;
+});
+
+
 
 // ✅ Swagger + Services
 builder.Services.AddControllers();
@@ -54,10 +66,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 var app = builder.Build();
 
 // ✅ Middleware
+app.UseRouting();
 app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
+
 app.UseHttpsRedirection();
+
 
 if (app.Environment.IsDevelopment())
 {

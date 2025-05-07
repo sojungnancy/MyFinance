@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using backend.Data;
 using backend.Models;
 using backend.Services;
+using System.Security.Claims;
 
 namespace backend.Controllers
 {
@@ -24,6 +25,7 @@ namespace backend.Controllers
         public IActionResult Login()
         {
             var props = new AuthenticationProperties { RedirectUri = "/auth/callback" };
+                Console.WriteLine("🚀 Google login challenge triggered at: " + DateTime.Now);
             return Challenge(props, GoogleDefaults.AuthenticationScheme);
         }
 
@@ -34,11 +36,10 @@ namespace backend.Controllers
         if (!result.Succeeded) return BadRequest();
 
         var claims = result.Principal!.Identities.FirstOrDefault()!.Claims;
-        var email = claims.First(c => c.Type.Contains("emailaddress")).Value;
-        var name = claims.First(c => c.Type.Contains("name")).Value;
-        var providerId = claims.First(c => c.Type.Contains("nameidentifier")).Value;
-
-        // 유저가 존재하지 않으면 저장
+var email = claims.First(c => c.Type == ClaimTypes.Email).Value;
+var name = claims.First(c => c.Type == ClaimTypes.Name).Value;
+var providerId = claims.First(c => c.Type == ClaimTypes.NameIdentifier).Value;
+    //if user is not exist = save it to the database
         var user = _context.Users.FirstOrDefault(u => u.Email == email);
         if (user == null)
         {
@@ -53,10 +54,10 @@ namespace backend.Controllers
             await _context.SaveChangesAsync();
         }
 
-        // ✅ JWT 토큰 발급
+        // ✅ JWT token
         var token = _jwtService.GenerateToken(user.id, user.Email, user.Name);
 
-        // ✅ 응답
+        // ✅ response
         return Redirect($"http://localhost:5173/login/success?token={token}&email={user.Email}&name={user.Name}");
 
 }}}
