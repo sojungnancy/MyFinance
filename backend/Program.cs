@@ -32,7 +32,7 @@ builder.Services.AddAuthentication(options =>
     options.Cookie.Name = ".AspNetCore.Cookies";
     options.Cookie.HttpOnly = true;
     options.Cookie.SameSite = SameSiteMode.None;
-    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;  // ✅ 반드시 이렇게
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;  
 })
 
 
