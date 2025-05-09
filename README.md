@@ -54,7 +54,7 @@ A full-stack web application to help users manage their personal finances by tra
 - **Frontend (React + Vite)**
   - Component-based structure (`components/`, `pages/`)
   - JWT stored after login, used for user session and role-based rendering
-  - Separate dashboards and features for Admin and User roles
+  - Separate dashboards and features for Admin and User roles (`/admin`)
 
 - **Database (PostgreSQL)**
   - Core tables: `users`, `transactions`, `budgets`
