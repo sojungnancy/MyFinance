@@ -3,7 +3,7 @@
 A full-stack web application to help users manage their personal finances by tracking income and expenses, analyzing spending patterns, and setting monthly budgets. Built with ASP.NET Core Web API (backend) and React (frontend), and integrated with PostgreSQL for persistent storage.
 
 ## 🚀 Features 
-### 🧑‍💻 Role-Based Access
+### 🧑‍💻 Role-Based Access Control
 
 #### 👤 Regular User (`User` Role)
 
