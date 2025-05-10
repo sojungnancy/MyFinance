@@ -59,7 +59,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ITransactionRepo, TransactionRepo>();
 builder.Services.AddScoped<JwtTokenService>();
 
-// ✅ DB
+// ✅ DataBase
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
