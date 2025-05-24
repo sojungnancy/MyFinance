@@ -31,7 +31,6 @@ A full-stack web application to help users manage their personal finances by tra
 > 🔐 All admin routes are protected via `[Authorize(Roles = "Admin")]`.
 
 
-
 ## 💻 Tech Stack
 
 - **Frontend**: React (Vite, JSX)
