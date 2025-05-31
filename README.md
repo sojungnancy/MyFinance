@@ -41,7 +41,6 @@ A full-stack web application to help users manage their personal finances by tra
 - **Dev Tools**: Swagger (Open API), Visual Studio Code
 - **Deployment (Optional)**: Docker, GitHub Actions
 
-
 ## 🛠 Development Approach
 
 - **Backend (ASP.NET Core Web API)**
